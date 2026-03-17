@@ -119,6 +119,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>$(CoreLibraryDependencies);runtimeobject.lib;windowsapp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -130,13 +131,14 @@
       <PreprocessorDefinitions>NDEBUG;POPSTACKERDLLDEVELOPMENT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>$(CoreLibraryDependencies);runtimeobject.lib;windowsapp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -522,6 +524,10 @@
     <ClInclude Include="lib\libhat\libhat\StringLiteral.hpp" />
     <ClInclude Include="lib\libhat\libhat\Traits.hpp" />
     <ClInclude Include="lib\minhook\MinHook.h" />
+    <ClInclude Include="main\events\eventmanager.h" />
+    <ClInclude Include="main\features\base.h" />
+    <ClInclude Include="main\features\example.h" />
+    <ClInclude Include="main\popstacker.h" />
     <ClInclude Include="ref\clientinstance.h" />
   </ItemGroup>
   <ItemGroup>
@@ -529,6 +535,10 @@
     <ClCompile Include="lib\glm\glm\detail\glm.cpp" />
     <ClCompile Include="lib\glm\glm\glm.cppm" />
     <ClCompile Include="lib\kiero\kiero.cpp" />
+    <ClCompile Include="main\events\eventmanager.cpp" />
+    <ClCompile Include="main\features\base.cpp" />
+    <ClCompile Include="main\features\example.cpp" />
+    <ClCompile Include="main\popstacker.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="lib\glm\glm\detail\func_common.inl" />

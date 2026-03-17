@@ -1164,6 +1164,18 @@
     <ClInclude Include="lib\minhook\MinHook.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="main\popstacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\features\example.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\features\base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\events\eventmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -1176,6 +1188,18 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="lib\kiero\kiero.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\popstacker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\features\example.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\features\base.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\events\eventmanager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
