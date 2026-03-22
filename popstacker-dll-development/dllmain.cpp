@@ -4,6 +4,11 @@
 #include <winrt/Windows.UI.ViewManagement.h>
 #include "main/popstacker.h"
 #include "main/events/eventmanager.h"
+#include "memory/hooks/hookmanager.h"
+#include "main/commandmanager/commandmanager.h"
+
+/* DLL VERSION 1.21.2 */
+/* i chose 1.21.2 since its stable, and i also just.. hate the new versions of mc. lol */
 
 using namespace winrt;
 using namespace Windows::ApplicationModel::Core;
@@ -21,9 +26,9 @@ static void setWindowTitle(const std::wstring& title) {
 }
 
 static DWORD WINAPI entry(HMODULE module) {
-    setWindowTitle(L"");
-
     popstacker::initialize();
+    CommandManager::init();
+    HookManager::init();
 
     setWindowTitle(L"popstacker.dll");
 

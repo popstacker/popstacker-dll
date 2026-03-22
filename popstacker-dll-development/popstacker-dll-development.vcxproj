@@ -108,7 +108,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;POPSTACKERDLLDEVELOPMENT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;POPSTACKERDLLDEVELOPMENT_EXPORTS;_WINDOWS;_USRDLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -128,11 +128,12 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;POPSTACKERDLLDEVELOPMENT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;POPSTACKERDLLDEVELOPMENT_EXPORTS;_WINDOWS;_USRDLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -219,6 +220,7 @@
     <ClInclude Include="lib\entt\signal\emitter.hpp" />
     <ClInclude Include="lib\entt\signal\fwd.hpp" />
     <ClInclude Include="lib\entt\signal\sigh.hpp" />
+    <ClInclude Include="lib\fonts\mojangles.h" />
     <ClInclude Include="lib\glm\glm\common.hpp" />
     <ClInclude Include="lib\glm\glm\detail\compute_common.hpp" />
     <ClInclude Include="lib\glm\glm\detail\compute_vector_decl.hpp" />
@@ -524,21 +526,58 @@
     <ClInclude Include="lib\libhat\libhat\StringLiteral.hpp" />
     <ClInclude Include="lib\libhat\libhat\Traits.hpp" />
     <ClInclude Include="lib\minhook\MinHook.h" />
+    <ClInclude Include="main\commandmanager\commandbase.h" />
+    <ClInclude Include="main\commandmanager\commandmanager.h" />
+    <ClInclude Include="main\commandmanager\commands\bind.h" />
     <ClInclude Include="main\events\eventmanager.h" />
     <ClInclude Include="main\features\base.h" />
-    <ClInclude Include="main\features\example.h" />
+    <ClInclude Include="main\features\combat\killaura.h" />
+    <ClInclude Include="main\features\misc\example.h" />
+    <ClInclude Include="main\features\visual\gui.h" />
     <ClInclude Include="main\popstacker.h" />
+    <ClInclude Include="memory\hooks\funchook.h" />
+    <ClInclude Include="memory\hooks\hookmanager.h" />
+    <ClInclude Include="memory\hooks\hooks-yeah\chatmessage.h" />
+    <ClInclude Include="memory\hooks\hooks-yeah\clientinstanceupdate.h" />
+    <ClInclude Include="memory\hooks\hooks-yeah\keymap.h" />
+    <ClInclude Include="memory\hooks\hooks-yeah\keymouse.h" />
+    <ClInclude Include="memory\hooks\hooks-yeah\normaltick.h" />
+    <ClInclude Include="memory\hooks\hooks-yeah\present.h" />
+    <ClInclude Include="memory\hooks\hooks-yeah\resizebuffers.h" />
+    <ClInclude Include="memory\hooks\hooks-yeah\setrot.h" />
+    <ClInclude Include="memory\memoryutil.h" />
+    <ClInclude Include="misc\direct2d.h" />
+    <ClInclude Include="misc\math.h" />
+    <ClInclude Include="misc\uicolor.h" />
+    <ClInclude Include="ref\actor.h" />
     <ClInclude Include="ref\clientinstance.h" />
+    <ClInclude Include="ref\components.h" />
+    <ClInclude Include="ref\font.h" />
+    <ClInclude Include="ref\game.h" />
+    <ClInclude Include="ref\gamemode.h" />
+    <ClInclude Include="ref\guidata.h" />
+    <ClInclude Include="ref\level.h" />
+    <ClInclude Include="ref\minecraft.h" />
+    <ClInclude Include="ref\minecraftgame.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="lib\glm\glm\detail\glm.cpp" />
     <ClCompile Include="lib\glm\glm\glm.cppm" />
     <ClCompile Include="lib\kiero\kiero.cpp" />
+    <ClCompile Include="main\commandmanager\commandbase.cpp" />
+    <ClCompile Include="main\commandmanager\commandmanager.cpp" />
+    <ClCompile Include="main\commandmanager\commands\bind.cpp" />
     <ClCompile Include="main\events\eventmanager.cpp" />
     <ClCompile Include="main\features\base.cpp" />
-    <ClCompile Include="main\features\example.cpp" />
+    <ClCompile Include="main\features\combat\killaura.cpp" />
+    <ClCompile Include="main\features\misc\example.cpp" />
+    <ClCompile Include="main\features\visual\gui.cpp" />
     <ClCompile Include="main\popstacker.cpp" />
+    <ClCompile Include="memory\hooks\funchook.cpp" />
+    <ClCompile Include="memory\hooks\hookmanager.cpp" />
+    <ClCompile Include="memory\memoryutil.cpp" />
+    <ClCompile Include="misc\direct2d.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="lib\glm\glm\detail\func_common.inl" />
@@ -680,6 +719,10 @@
     <None Include="lib\glm\glm\gtx\vector_query.inl" />
     <None Include="lib\glm\glm\gtx\wrap.inl" />
     <None Include="lib\libhat\libhat\Scanner.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\libhat\libhat.lib" />
+    <Library Include="lib\minhook\minhook.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

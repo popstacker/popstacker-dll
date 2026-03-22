@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="popstacker-dll-development/popstacker-dll-development.vcxproj" />
+  <Project Path="popstacker-dll-development/popstacker-dll-development.vcxproj" Id="91b93f33-0848-42c4-bb17-03cc592b1a17" />
 </Solution>

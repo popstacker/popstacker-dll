@@ -18,9 +18,6 @@
     <ClInclude Include="framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ref\clientinstance.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="lib\entt\config\config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1167,13 +1164,103 @@
     <ClInclude Include="main\popstacker.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main\features\example.h">
+    <ClInclude Include="main\features\misc\example.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="main\features\base.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="main\events\eventmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\memoryutil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\hooks\hookmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ref\game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ref\clientinstance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ref\minecraft.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ref\guidata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ref\minecraftgame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\math.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ref\font.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ref\actor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\hooks\funchook.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\hooks\hooks-yeah\clientinstanceupdate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\hooks\hooks-yeah\present.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\hooks\hooks-yeah\resizebuffers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\direct2d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\uicolor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\fonts\mojangles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\hooks\hooks-yeah\normaltick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\hooks\hooks-yeah\keymap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\hooks\hooks-yeah\keymouse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\hooks\hooks-yeah\chatmessage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\commandmanager\commandmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\commandmanager\commands\bind.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\commandmanager\commandbase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\features\visual\gui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\features\combat\killaura.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ref\components.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ref\level.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ref\gamemode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\hooks\hooks-yeah\setrot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -1193,13 +1280,40 @@
     <ClCompile Include="main\popstacker.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main\features\example.cpp">
+    <ClCompile Include="main\features\misc\example.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main\features\base.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main\events\eventmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="memory\memoryutil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="memory\hooks\hookmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="memory\hooks\funchook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\direct2d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\commandmanager\commandmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\commandmanager\commands\bind.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\commandmanager\commandbase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\features\visual\gui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\features\combat\killaura.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -1621,5 +1735,9 @@
     <None Include="lib\libhat\libhat\Scanner.inl">
       <Filter>Header Files</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\libhat\libhat.lib" />
+    <Library Include="lib\minhook\minhook.lib" />
   </ItemGroup>
 </Project>
